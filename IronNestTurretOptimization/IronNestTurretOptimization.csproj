@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\interop\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\core\BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\core\BepInEx.Unity.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\interop\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\interop\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>V:\SteamLibrary\steamapps\common\IRON NEST Heavy Turret Simulator Demo\BepInEx\interop\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
