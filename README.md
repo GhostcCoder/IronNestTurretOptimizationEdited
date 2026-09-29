@@ -10,18 +10,9 @@ The original mod can lose some of its applied turret settings when the game tran
 
 The fix was tested in-game across a round transition.
 
-### MelonLoader Port
+### MelonLoader Port Add
 
-A separate MelonLoader implementation is included for users who run the game with MelonLoader instead of BepInEx.
-
-## Versions
-
-| Folder | Loader | Description |
-|---|---|---|
-| `BepInEx/` | BepInEx 6 | Original BepInEx implementation with the round-persistence fix |
-| `MelonLoader/` | MelonLoader 0.7.x | MelonLoader port with the round-persistence fix |
-
-Use **only the version matching your installed mod loader**.
+MelonLoader implementation is added for users.
 
 ## Installation
 
@@ -45,6 +36,14 @@ The source files are located in their respective script folders. Build instructi
 5. Run `Install.bat`, or copy the generated DLL from the `Build` folder to your mod directory.
 
 *The setup scripts do not require a hard-coded game installation path; you can enter the path manually during setup.*
+
+## Versions
+
+| Folder | Loader | Description |
+|---|---|---|
+| `BepInEx/` | BepInEx 6 | Original BepInEx implementation with the round-persistence fix |
+| `MelonLoader/` | MelonLoader 0.7.x | MelonLoader port with the round-persistence fix |
+
 
 ## Source and attribution
 
