@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <OutputType>Library</OutputType>
+    <AssemblyName>IronNestTurretOptimization</AssemblyName>
+    <RootNamespace>IronNestTurretOptimization</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <OutputPath>..\Build\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BepInExRefDir>$(MSBuildThisFileDirectory)..\Lib\BepInExCore</BepInExRefDir>
+    <InteropRefDir>$(MSBuildThisFileDirectory)..\Lib\Interop</InteropRefDir>
+  </PropertyGroup>
+
+  <Target Name="CheckReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(BepInExRefDir)\BepInEx.Core.dll')" Text="BepInEx references are missing. Run ..\SetupGameAssemblies.bat first." />
+    <Error Condition="!Exists('$(InteropRefDir)\Assembly-CSharp.dll')" Text="Assembly-CSharp.dll is missing. Run ..\SetupGameAssemblies.bat first." />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExRefDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(InteropRefDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>$(BepInExRefDir)\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>$(BepInExRefDir)\BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(BepInExRefDir)\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(InteropRefDir)\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>$(InteropRefDir)\Unity.InputSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(InteropRefDir)\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(InteropRefDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>$(InteropRefDir)\UnityEngine.InputModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

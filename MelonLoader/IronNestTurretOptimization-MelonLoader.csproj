@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>IronNestTurretOptimization</AssemblyName>
+    <RootNamespace>IronNestTurretOptimization</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <OutputPath>Build\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GameRefDir>$(MSBuildThisFileDirectory)Lib\Game</GameRefDir>
+    <MelonRefDir>$(MSBuildThisFileDirectory)Lib\MelonLoader</MelonRefDir>
+  </PropertyGroup>
+
+  <Target Name="CheckGameAssemblies" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GameRefDir)\Assembly-CSharp.dll')" Text="Assembly-CSharp.dll is missing. Run SetupGameAssemblies.bat first." />
+    <Error Condition="!Exists('$(MSBuildThisFileDirectory)Lib\GameReferences.props')" Text="GameReferences.props is missing. Run SetupGameAssemblies.bat first." />
+    <Error Condition="!Exists('$(MelonRefDir)\MelonLoader.dll')" Text="MelonLoader.dll is missing. Run SetupGameAssemblies.bat first." />
+    <Error Condition="!Exists('$(MelonRefDir)\0Harmony.dll')" Text="0Harmony.dll is missing. Run SetupGameAssemblies.bat first." />
+    <Error Condition="!Exists('$(MelonRefDir)\Il2CppInterop.Runtime.dll')" Text="Il2CppInterop.Runtime.dll is missing. Run SetupGameAssemblies.bat first." />
+  </Target>
+
+  <Import Project="Lib\GameReferences.props" />
+
+  <ItemGroup>
+    <Reference Include="MelonLoader">
+      <HintPath>$(MelonRefDir)\MelonLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(MelonRefDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(MelonRefDir)\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
