@@ -65,12 +65,6 @@ The entirety of this mod modification and porting was created with the assistanc
 ## Notes
 
 - This is a community modification and is not an official update from the original author.
-...
-## Notes
-
-## Notes
-
-- This is a community modification and is not an official update from the original author.
 - Game/loader versions can change. Compatibility may depend on the current Iron Nest game build and generated IL2CPP assemblies.
 - Generated reference assemblies and build output are intentionally not included in the repository. Run the setup script against your own game installation to generate the required references.
 - **Game performance and system requirements may vary when using this mod.**
